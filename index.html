@@ -1,0 +1,550 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17453926639"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17453926639');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Cremación Directa en AMBA | Despedida Simple - Rápido y Económico desde $570.000</title>
+  <meta name="description" content="Cremación directa en Buenos Aires y AMBA desde $570.000. Servicio rápido en 24-48hs. Incluye retiro, trámites, cremación y urna. Sin velatorio. Atención inmediata por WhatsApp.">
+  <meta name="keywords" content="cremación, cremación directa, cremación económica, cremación barata, cremación rápida, cremación express, cremar, crematorio, cremaciones AMBA, cremaciones Buenos Aires, cremaciones baratas, servicio de cremación, cuanto cuesta cremar, precio cremación, cremación sin velorio, cremación simple, despedida simple, cremar familiar, necesito cremar, cremación urgente">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://despedidasimple.com/">
+  <meta property="og:title" content="Cremación Directa en AMBA | Despedida Simple - Rápido y Económico">
+  <meta property="og:description" content="Cremación directa desde $570.000 en Buenos Aires. Servicio rápido en 24-48hs. Incluye todo: retiro, trámites, cremación y urna. Atención inmediata.">
+  <meta property="og:image" content="https://despedidasimple.com/og-image.jpg">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Despedida Simple">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://despedidasimple.com/">
+  <meta property="twitter:title" content="Cremación Directa en AMBA | Despedida Simple">
+  <meta property="twitter:description" content="Cremación directa desde $570.000. Servicio rápido en 24-48hs. Todo incluido. Atención inmediata por WhatsApp.">
+  <meta property="twitter:image" content="https://despedidasimple.com/og-image.jpg">
+  
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="AR-B">
+  <meta name="geo.placename" content="Buenos Aires">
+  <meta name="geo.position" content="-34.6037;-58.3816">
+  <meta name="ICBM" content="-34.6037, -58.3816">
+  
+  <!-- Additional Meta Tags -->
+  <meta name="author" content="Despedida Simple">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="rating" content="general">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://despedidasimple.com/">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FuneralHome",
+    "name": "Despedida Simple",
+    "description": "Servicio de cremación directa en Buenos Aires y AMBA. Rápido, económico y simple.",
+    "url": "https://despedidasimple.com",
+    "logo": "https://despedidasimple.com/logo.png",
+    "image": "https://despedidasimple.com/og-image.jpg",
+    "telephone": "+5491133131536",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buenos Aires",
+      "addressRegion": "AMBA",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.6037",
+      "longitude": "-58.3816"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.6037",
+        "longitude": "-58.3816"
+      },
+      "geoRadius": "50000"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.google.com/maps/place/Casa+Dauria"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Cremación",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cremación Directa",
+            "description": "Servicio de cremación directa que incluye retiro, trámites legales, cremación y entrega de cenizas"
+          },
+          "price": "570000",
+          "priceCurrency": "ARS"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Trabajan con obras sociales/PAMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, trabajamos con obras sociales y PAMI, y te asesoramos ante cualquier cobertura disponible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo tarda el proceso de cremación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El proceso completo suele tomar entre 24 y 48 horas, dependiendo de los trámites legales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde se realiza la cremación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Todas nuestras cremaciones son realizadas en el Cementerio Privado y Crematorio Las Praderas de Esteban Echeverría, un Jardín de Descanso serio y respetuoso, con más de 30 años de excelente reputación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es posible presenciar la cremación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, es posible pedir un turno para estar en el crematorio durante la cremación y retirar las cenizas en el día."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una cremación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestro servicio de cremación directa cuesta $570.000 e incluye retiro del fallecido, trámites legales, certificado de defunción, traslado, cremación, entrega de cenizas a domicilio y urna estándar de madera."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://despedidasimple.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://despedidasimple.com/#servicios"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Precios",
+        "item": "https://despedidasimple.com/#precio"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Contacto",
+        "item": "https://despedidasimple.com/#contacto"
+      }
+    ]
+  }
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-darker-blue {
+      background-color: #0F172A;
+    }
+    .text-darker-blue {
+      color: #0F172A;
+    }
+    .hover\:bg-darker-blue:hover {
+      background-color: #0F172A;
+    }
+    .bg-whatsapp-green {
+      background-color: #25D366;
+    }
+    .bg-whatsapp-green-dark:hover {
+      background-color: #1EBE57;
+    }
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-image-container {
+      width: 100%;
+      height: 400px; /* Altura base para el contenedor */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .carousel-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* Asegura que las imágenes se vean completas */
+    }
+    @media (max-width: 640px) {
+      .carousel-image-container {
+        height: 250px; /* Ajuste para móviles */
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- Header -->
+  <header class="bg-darker-blue text-white text-center py-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Despedida <span class="text-gray-500">Simple</span></h1>
+  </header>
+  
+  <!-- Hero Section -->
+  <section id="contacto" class="bg-white text-center py-12" itemscope itemtype="https://schema.org/Service">
+    <h2 class="text-3xl font-semibold mb-4" itemprop="name">Cremación directa en AMBA</h2>
+    <p class="text-lg mb-6" itemprop="description">Rápido. Económico. <span style="font-weight: bold; color: gray;">Simple.</span></p>
+    <meta itemprop="serviceType" content="Cremación Directa">
+    <meta itemprop="areaServed" content="Buenos Aires, AMBA">
+    <a href="https://wa.me/5491133131536?text=Quiero%20solicitar%20sus%20servicios" class="inline-block bg-whatsapp-green text-white font-semibold text-lg py-3 px-6 rounded-lg hover:bg-whatsapp-green-dark transition" rel="noopener" aria-label="Contactar por WhatsApp para solicitar servicio">Solicitar servicio ahora</a>
+    <p class="text-lg mt-4"><a href="tel:+5491133131536" class="inline-block bg-[#0F172A] text-white font-semibold text-lg py-3 px-6 rounded-lg hover:bg-[#1E293B] transition" itemprop="telephone" aria-label="Llamar al teléfono de contacto">Llamar +54 9 11 3313-1536</a></p>
+</section>
+
+ <!-- About Us -->
+  <section id="servicios" class="py-12 bg-gray-50" itemscope itemtype="https://schema.org/AboutPage">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold text-center mb-8 text-[#162A5A]">¿Quiénes somos?</h2>
+      <p class="text-lg mb-6" itemprop="description">En <strong>Despedida Simple</strong> somos un equipo especializado en servicios de <strong>cremación directa en el AMBA</strong>.
+A diferencia de las funerarias tradicionales, no ofrecemos velatorios largos ni servicios que encarezcan el proceso: nos enfocamos en brindar una <strong>despedida sencilla, clara y accesible</strong>, respetando siempre la dignidad de la persona y la tranquilidad de su familia. Nos respaldan años de experiencia y miles de familias acompañadas en <strong>Buenos Aires y Gran Buenos Aires</strong>.</p>
+</section>
+
+  <!-- Carousel -->
+  <section class="bg-white py-12" aria-label="Galería de imágenes del servicio">
+    <div class="carousel">
+      <div class="carousel-slide" id="carouselSlide">
+        <div class="carousel-image-container"><img src="https://i.imgur.com/Jmq6gCj.jpeg" alt="Urna de madera estándar incluida en el servicio de cremación directa" class="carousel-image" loading="lazy"></div>
+        <div class="carousel-image-container"><img src="https://i.imgur.com/oO01kAj.jpeg" alt="Crematorio Las Praderas - Instalaciones modernas para cremación en AMBA" class="carousel-image" loading="lazy"></div>
+        <div class="carousel-image-container"><img src="https://i.imgur.com/1Vg9wvg.jpeg" alt="Vehículo de traslado profesional para servicios de cremación" class="carousel-image" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="ventajas" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold text-center mb-8 text-[#162A5A]">Por qué elegir Despedida Simple</h2>
+      <div class="flex flex-row justify-center gap-8 flex-wrap">
+        <div class="flex-1 min-w-[150px] border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+          <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="#162A5A" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <p class="font-semibold">Atención 24 hs</p>
+        </div>
+        <div class="flex-1 min-w-[150px] border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+          <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="#162A5A" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+          <p class="font-semibold">Tarifa fija y clara</p>
+        </div>
+        <div class="flex-1 min-w-[150px] border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+          <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="#162A5A" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+          <p class="font-semibold">Cobertura en Capital y Provincia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How It Works -->
+  <section class="bg-gray-50 py-12 px-4 md:px-8">
+    <h2 class="text-3xl font-semibold text-center mb-8 text-[#162A5A]">¿Cómo funciona?</h2>
+    <div class="max-w-5xl mx-auto space-y-6">
+      <div class="flex flex-col items-center text-center">
+        <span class="text-2xl font-bold text-[#162A5A] border-2 border-[#162A5A] rounded-full w-10 h-10 flex items-center justify-center mb-2">1</span>
+        <div>
+          <h3 class="text-xl font-bold text-[#162A5A]">Contacto</h3>
+          <p>Nos llamás o escribís por WhatsApp.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <span class="text-2xl font-bold text-[#162A5A] border-2 border-[#162A5A] rounded-full w-10 h-10 flex items-center justify-center mb-2">2</span>
+        <div>
+          <h3 class="text-xl font-bold text-[#162A5A]">Confirmación</h3>
+          <p>Confirmamos los datos.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <span class="text-2xl font-bold text-[#162A5A] border-2 border-[#162A5A] rounded-full w-10 h-10 flex items-center justify-center mb-2">3</span>
+        <div>
+          <h3 class="text-xl font-bold text-[#162A5A]">Retiro</h3>
+          <p>Retiramos al fallecido.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <span class="text-2xl font-bold text-[#162A5A] border-2 border-[#162A5A] rounded-full w-10 h-10 flex items-center justify-center mb-2">4</span>
+        <div>
+          <h3 class="text-xl font-bold text-[#162A5A]">Cremación</h3>
+          <p>Realizamos la cremación.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <span class="text-2xl font-bold text-[#162A5A] border-2 border-[#162A5A] rounded-full w-10 h-10 flex items-center justify-center mb-2">5</span>
+        <div>
+          <h3 class="text-xl font-bold text-[#162A5A]">Entrega</h3>
+          <p>Entregamos las cenizas en tu domicilio junto con el certificado de defunción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="precio" class="py-12 px-4 md:px-8 text-center" itemscope itemtype="https://schema.org/Offer">
+    <h2 class="text-3xl font-semibold mb-8">Tarifa clara y accesible</h2>
+    <p class="text-2xl font-bold mb-4" style="color: #4CAF50;">
+      <span itemprop="priceCurrency" content="ARS">AR$</span> 
+      <span itemprop="price" content="570000">570.000</span>
+    </p>
+    <meta itemprop="availability" content="https://schema.org/InStock">
+    <meta itemprop="url" content="https://despedidasimple.com">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-semibold">Incluye:</p>
+      <ul class="list-disc list-inside space-y-2 mt-4 text-left max-w-md mx-auto" itemprop="description">
+        <li><strong>Retiro del fallecido</strong> en cualquier punto de AMBA</li>
+        <li><strong>Trámites legales</strong> y certificado de defunción</li>
+        <li><strong>Traslado y cremación</strong> en crematorio habilitado</li>
+        <li><strong>Entrega de cenizas</strong> a domicilio sin cargo</li>
+        <li><strong>Urna estándar de madera</strong> incluida</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="preguntas" class="bg-gray-50 py-12 px-4 md:px-8">
+    <h2 class="text-3xl font-semibold text-center mb-8">Preguntas frecuentes</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <div class="accordion">
+        <h3 class="text-xl font-bold cursor-pointer transition-colors flex items-center" onclick="toggleAnswer(this)"><svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span class="align-text-top">¿Trabajan con obras sociales/PAMI?</span></h3>
+        <p class="answer hidden mt-2">Sí, y te asesoramos ante cualquier cobertura disponible.</p>
+      </div>
+      <div class="accordion">
+        <h3 class="text-xl font-bold cursor-pointer transition-colors flex items-center" onclick="toggleAnswer(this)"><svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span class="align-text-top">¿Cuánto tiempo tarda el proceso?</span></h3>
+        <p class="answer hidden mt-2">El proceso completo suele tomar entre 24 y 48 horas, dependiendo de los trámites legales.</p>
+      </div>
+      <div class="accordion">
+        <h3 class="text-xl font-bold cursor-pointer transition-colors flex items-center" onclick="toggleAnswer(this)"><svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span class="align-text-top">¿Dónde se realiza la cremación?</span></h3>
+        <p class="answer hidden mt-2">Todas nuestras cremaciones son realizadas en el Cementerio Privado y Crematorio Las Praderas de Esteban Echeverría, un Jardín de Descanso serio y respetuoso, con más de 30 años de excelente reputación.</p>
+      </div>
+      <div class="accordion">
+        <h3 class="text-xl font-bold cursor-pointer transition-colors flex items-center" onclick="toggleAnswer(this)"><svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span class="align-text-top">¿Es posible presenciar la cremación?</span></h3>
+        <p class="answer hidden mt-2">Sí, es posible pedir un turno para estar en el crematorio durante la cremación y retirar las cenizas en el día.</p>
+      </div>
+      <div class="accordion">
+        <h3 class="text-xl font-bold cursor-pointer transition-colors flex items-center" onclick="toggleAnswer(this)"><svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span class="align-text-top">¿Hay opción de velatorio?</span></h3>
+        <p class="answer hidden mt-2">Sí, por un adicional es posible velar en el Cementerio Parque Las Praderas o en distintas salas velatorias en todo AMBA.</p>
+      </div>
+      <div class="accordion">
+        <h3 class="text-xl font-bold cursor-pointer transition-colors flex items-center" onclick="toggleAnswer(this)"><svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg><span class="align-text-top">¿Cómo se realiza el pago?</span></h3>
+        <p class="answer hidden mt-2">Aceptamos pagos en efectivo, transferencias bancarias y pagos digitales en cuotas. Detalles por WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleAnswer(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle('hidden');
+      element.classList.toggle('active');
+    }
+  </script>
+
+  <style>
+    .accordion h3.active svg {
+      transform: rotate(180deg);
+    }
+    .accordion h3 svg {
+      transition: transform 0.2s;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .accordion h3 {
+      display: flex;
+      align-items: center;
+    }
+    .accordion h3 span.align-text-top {
+      vertical-align: top;
+    }
+  </style>
+
+  <!-- Backed On -->
+<section id="testimonios" class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-semibold text-center text-[#0F172A] mb-8">Lo que dicen nuestras familias</h2>
+    <p class="text-center text-gray-600 mb-8">Agradecemos la confianza de quienes nos eligen en momentos difíciles. Estas son opiniones de nuestro perfil en Google Maps.
+      Nos respalda la confianza y experiencia de Casa Dauria de San Justo, una funeraria con más de 60 años en el rubro y miles de familias atendidas.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Reseña 1 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"La verdad estoy muy satisfecho con el servicio. Fue un pérdida muy dura para todos, pero hicieron que todo sea llevadero con un ambiente cálido y buena atención. Es un lugar que viene de generación en generación y se seguirá eligiendo"</p>
+        <p class="mt-4 text-sm text-gray-500">– Usuario de Google, 15 de enero de 2024</p>
+      </div>
+      <!-- Reseña 2 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"Atención respetuosa y profesional en un momento difícil. Servicio organizado y ambiente tranquilo."</p>
+        <p class="mt-4 text-sm text-gray-500">– Usuario de Google, 22 de marzo de 2025</p>
+      </div>
+      <!-- Reseña 3 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"Excelente atención y servicio. Si bien es un momento difícil para transitar, ellos nos asesoraron y se ocuparon de todo. Estuvimos muy bien atendidos y en todos los detalles"</p>
+        <p class="mt-4 text-sm text-gray-500">– Usuario de Google, 10 de julio de 2025</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="https://www.google.com/maps/place/Casa+Dauria/@-34.6813747,-58.558426,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc6273ed7cdd3:0x689fabbf620791d8!8m2!3d-34.6813747!4d-58.5558511!16s%2Fg%2F1tj5ry11?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-block bg-[#4285F4] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#3267D6] transition">Ver más opiniones en Google Maps</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-darker-blue text-white text-center py-12" itemscope itemtype="https://schema.org/ContactPage">
+    <h2 class="text-3xl font-semibold mb-4">Contáctanos ahora</h2>
+    <p class="mb-6">Resolvemos todo de forma rápida y simple por WhatsApp. <strong>Atención las 24 horas</strong>, todos los días.</p>
+    <a href="https://wa.me/5491133131536?text=Quiero%20hacer%20una%20consulta" class="inline-block bg-[#25D366] text-darker-blue font-semibold py-3 px-6 rounded-lg hover:bg-[#20b056] transition" rel="noopener" aria-label="Contactar por WhatsApp">Escríbenos por WhatsApp</a>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6" itemscope itemtype="https://schema.org/WPFooter">
+    <p><strong>Despedida Simple</strong> - Cremaciones rápidas y económicas en AMBA</p>
+    <p class="text-sm mt-2">Servicio de cremación directa en Buenos Aires | Capital Federal y Gran Buenos Aires</p>
+    <p class="text-xs mt-2">© 2025 Despedida Simple. Todos los derechos reservados.</p>
+    <nav class="mt-4 text-sm" aria-label="Enlaces del pie de página">
+      <a href="#contacto" class="text-gray-300 hover:text-white mx-2">Contacto</a>
+      <a href="#servicios" class="text-gray-300 hover:text-white mx-2">Servicios</a>
+      <a href="#precio" class="text-gray-300 hover:text-white mx-2">Precios</a>
+      <a href="#preguntas" class="text-gray-300 hover:text-white mx-2">FAQ</a>
+    </nav>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let slideIndex = 0;
+      const slides = document.getElementById('carouselSlide');
+      const totalSlides = 3;
+
+      function showNextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+      }
+
+      // Iniciar carrusel cada 5 segundos
+      setInterval(showNextSlide, 5000);
+
+      // Mostrar la primera imagen al cargar
+      showNextSlide();
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9690ee0fddab322d',t:'MTc1NDE3Mjg4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+<!-- Botón flotante con imagen -->
+<a href="https://wa.me/5491133131536?text=Hola%2C%20quiero%20hacer%20una%20consulta" 
+   class="fixed bottom-4 right-4 z-50 w-14 h-14" 
+   target="_blank" 
+   aria-label="WhatsApp">
+  <img src="logo whatsapp.png" alt="WhatsApp" class="w-full h-full object-contain hover:scale-110 transition">
+</a>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ae70be6fdf8e4f',t:'MTc1NDQ4MjMyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ca46d788f2ccba',t:'MTc1NDc3NDIwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96cab6eb2869b861',t:'MTc1NDc3ODgwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96d3deeca98569a7',t:'MTc1NDg3NDgxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

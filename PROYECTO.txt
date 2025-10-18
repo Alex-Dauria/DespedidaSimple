@@ -1,0 +1,125 @@
+🚀 DESPEDIDA SIMPLE - SEO OPTIMIZADO PARA APARECER #1 EN GOOGLE
+
+📂 ESTRUCTURA DEL PROYECTO:
+
+ARCHIVOS CRÍTICOS PARA SEO:
+✅ index.html - Página principal con meta tags, Schema.org, Open Graph
+✅ robots.txt - Instrucciones para buscadores
+✅ sitemap.xml - Mapa del sitio con todas las URLs
+✅ netlify.toml - Configuración de hosting y headers
+✅ humans.txt - Información del equipo
+✅ .well-known/security.txt - Seguridad y credibilidad
+
+ARCHIVOS DE CONFIGURACIÓN:
+✅ .vscode/settings.json - Evita errores falsos en editor
+✅ .gitignore - Control de versiones
+✅ _headers - Headers HTTP de seguridad/cache (Netlify)
+✅ _redirects - Redirecciones HTTPS y www
+✅ site.webmanifest - PWA/Móvil
+✅ .htaccess - Backup para Apache
+
+ASSETS:
+✅ logo whatsapp.png - Botón flotante
+✅ favicon (1).ico - Icono del sitio
+
+
+🔍 OPTIMIZACIONES IMPLEMENTADAS:
+
+1. META TAGS:
+   ✓ Title con keywords: "Cremación Directa en AMBA | Despedida Simple..."
+   ✓ Description con CTA
+   ✓ Keywords: 30+ términos relevantes
+   ✓ Open Graph para redes sociales
+   ✓ Twitter Cards
+   ✓ Geo-tags para Buenos Aires/AMBA
+
+2. SCHEMA.ORG (JSON-LD):
+   ✓ FuneralHome - Datos completos del negocio
+   ✓ FAQPage - Preguntas estructuradas
+   ✓ Offer - Precios
+   ✓ BreadcrumbList - Navegación
+   ✓ AggregateRating - Reseñas
+
+3. TÉCNICAS:
+   ✓ Lazy loading en imágenes
+   ✓ Alt text descriptivo en TODAS las imágenes
+   ✓ H1, H2, H3 jerárquicos
+   ✓ URLs canónicas
+   ✓ Microformatos itemscope/itemprop
+   ✓ Canonical URL
+
+4. PERFORMANCE:
+   ✓ Cache Control optimizado
+   ✓ Minificación de CSS/JS en Netlify
+   ✓ Headers de seguridad
+   ✓ HTTPS forzado
+   ✓ WWW redirección
+
+5. LOCAL SEO:
+   ✓ Geo-tags para AMBA
+   ✓ Schema LocalBusiness
+   ✓ Área de servicio definida
+
+
+📊 KEYWORDS OPTIMIZADOS:
+
+PRIMARIOS:
+• cremación
+• cremación directa
+• cremación Buenos Aires
+• cremación AMBA
+• cremación barata
+• cremación rápida
+
+LONG-TAIL (Alta conversión):
+• necesito cremar a mi papa/mama
+• cuanto cuesta cremar
+• cremación sin velorio
+• cremación urgente
+• cremación 24 horas
+
+LOCAL:
+• cremación zona norte/sur/oeste
+• cremación [ciudad específica]
+
+
+🎯 PRÓXIMOS PASOS (ACCIONES REALES):
+
+1. REGISTRARSE EN GOOGLE:
+   ✓ Google Search Console: https://search.google.com/search-console
+   ✓ Enviar sitemap: https://despedidasimple.com/sitemap.xml
+   ✓ Verificar propiedad
+
+2. GOOGLE MY BUSINESS (CRÍTICO):
+   ✓ Crear perfil: https://business.google.com
+   ✓ Completar información 100%
+   ✓ Subir 10+ fotos
+   ✓ Solicitar reseñas
+
+3. MONITOREO SEMANAL:
+   ✓ Search Console: rankings, CTR, impresiones
+   ✓ Google My Business: reseñas, mensajes
+   ✓ Analytics: tráfico orgánico
+
+4. CONTENIDO (Optional - Futuro):
+   ✓ Blog con artículos de 1500+ palabras
+   ✓ FAQs expandidas
+   ✓ Testimonios con fotos
+
+
+📈 RESULTADOS ESPERADOS:
+
+MES 1: 50-100 visitas, Top 20 rankings
+MES 3: 200-300 visitas, Top 10 rankings
+MES 6: 500+ visitas, Top 5 rankings, 50%+ leads desde SEO
+
+
+💡 CONTACTO:
+WhatsApp: +54 9 11 3313-1536
+Web: https://despedidasimple.com
+Email: [agregar cuando esté disponible]
+
+
+✨ TU SITIO ESTÁ LISTO PARA DOMINAR LAS BÚSQUEDAS LOCALES SIN PUBLICIDAD PAGA.
+
+Próximo paso: Registrarse en Google Search Console hoy.

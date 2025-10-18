@@ -1,0 +1,25 @@
+/* TEAM */
+Name: Despedida Simple
+Site: https://despedidasimple.com
+Twitter: @DespedidaSimple
+Location: Buenos Aires, Argentina
+
+/* SITE */
+Language: Spanish (Español)
+Charset: UTF-8
+DocType: HTML5
+Doctype: html lang="es"
+
+/* STANDARDS */
+Standards: HTML5, CSS3
+Components: Tailwind CSS, Schema.org
+Analytics: Google Analytics
+Tracking: Google Tag Manager
+
+/* TOOLS */
+Built with: HTML5, CSS3, JavaScript
+Optimized with: SEO Best Practices 2025
+Hosting: Netlify
+
+/* ACKNOWLEDGMENTS */
+Thanks to all our clients and families we serve

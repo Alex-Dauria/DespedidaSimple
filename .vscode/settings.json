@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "_headers": "plaintext",
+    "_redirects": "plaintext",
+    ".htaccess": "plaintext"
+  },
+  "editor.defaultFormatter": null,
+  "[plaintext]": {
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false
+  }
+}
