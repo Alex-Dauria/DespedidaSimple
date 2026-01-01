@@ -491,17 +491,49 @@ a {
 }
 
 /* ===== Section Text Mobile/Desktop ===== */
-.section__text-line1 {
-  display: block;
-}
-
+.section__text-line1,
 .section__text-line2 {
-  display: none;
+  display: block;
 }
 
 @media (min-width: 768px) {
   .section__text-line1,
   .section__text-line2 {
+    display: inline;
+  }
+}
+
+/* ===== FAQ Text Mobile/Desktop ===== */
+.faq__text-line1 {
+  display: block;
+}
+
+.faq__text-line2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .faq__text-line1,
+  .faq__text-line2 {
+    display: inline;
+  }
+}
+
+/* ===== Price Card Text Mobile/Desktop ===== */
+.price-card__mobile-text {
+  display: inline;
+}
+
+.price-card__desktop-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .price-card__mobile-text {
+    display: none;
+  }
+  
+  .price-card__desktop-text {
     display: inline;
   }
 }
@@ -1394,6 +1426,7 @@ a {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
 
 /* ===== Scroll Progress ===== */
 .scroll-progress {
