@@ -171,6 +171,58 @@ a {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
 
+/* Título servicios más pequeño en móviles pequeños */
+@media (max-width: 480px) {
+  .section.services h2.services-title-mobile {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .section.services h2.services-title-mobile {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* Título cobertura más pequeño en móviles */
+@media (max-width: 480px) {
+  .section.coverage h2.coverage-title-mobile {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .section.coverage h2.coverage-title-mobile {
+    font-size: 1.45rem !important;
+  }
+}
+
+/* Texto cobertura más pequeño en móviles */
+@media (max-width: 480px) {
+  .section.coverage .coverage__text p {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .section.coverage .coverage__text p {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Título CTA más pequeño en móviles */
+@media (max-width: 480px) {
+  .section.cta-section h2.cta-title-mobile {
+    font-size: 1.75rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .section.cta-section h2.cta-title-mobile {
+    font-size: 1.45rem !important;
+  }
+}
+
 .services__text-line1,
 .services__text-line2 {
   display: block;
@@ -815,6 +867,42 @@ a {
   }
 }
 
+/* Trust Bar Description */
+.trust-bar__description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.25rem;
+}
+
+.trust-bar__description--mobile {
+  display: inline;
+}
+
+.trust-bar__description--desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .trust-bar__description {
+    font-size: 0.9375rem;
+    padding: 1.5rem 2rem 0.75rem;
+  }
+  
+  .trust-bar__description--mobile {
+    display: none;
+  }
+  
+  .trust-bar__description--desktop {
+    display: inline;
+  }
+}
+
 /* ===== How it Works (Process) ===== */
 .process {
   background: white;
@@ -1339,6 +1427,44 @@ a {
   }
 }
 
+/* Teléfono en CTA */
+.cta__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-top: -2rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.cta__phone svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gold-light);
+}
+
+@media (hover: hover) {
+  .cta__phone:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta__phone {
+    display: none;
+  }
+}
+
+/* Ocultar teléfono y atención 24hs del footer en mobile */
+@media (max-width: 768px) {
+  .footer__contact {
+    display: none;
+  }
+}
+
 .cta-section .btn-group {
   max-width: 500px;
 }
@@ -1347,19 +1473,47 @@ a {
 .footer {
   background: var(--color-charcoal);
   color: white;
-  padding: 4rem 0 2rem;
+  padding: 2rem 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+  }
 }
 
 .footer__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
   .footer__grid {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    margin-bottom: 0;
+  }
+  
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    align-self: end;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer__brand {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__brand {
+    text-align: left;
   }
 }
 
@@ -1378,7 +1532,7 @@ a {
 .footer__brand p {
   color: rgba(255,255,255,0.7);
   font-size: 0.9375rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer__brand p:first-of-type {
@@ -1386,6 +1540,10 @@ a {
 }
 
 @media (min-width: 768px) {
+  .footer__brand p {
+    margin-bottom: 1.5rem;
+  }
+  
   .footer__brand-experience {
     margin-top: 0;
   }
@@ -1394,10 +1552,17 @@ a {
 .footer__contact-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   color: rgba(255,255,255,0.8);
   font-size: 0.9375rem;
   margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .footer__contact-item {
+    justify-content: flex-end;
+  }
 }
 
 .footer__contact-item svg {
@@ -1418,6 +1583,15 @@ a {
 
 .footer__links ul {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer__links ul {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer__links li {
