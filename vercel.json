@@ -14,6 +14,31 @@
       "source": "/zonas/caba/",
       "destination": "/zonas/cremacion-caba/",
       "permanent": true
+    },
+    {
+      "source": "/cremacion-lamatanza.html",
+      "destination": "/zonas/cremacion-lamatanza/",
+      "permanent": true
+    },
+    {
+      "source": "/zonas/cremacion-lamatanza.html",
+      "destination": "/zonas/cremacion-lamatanza/",
+      "permanent": true
+    },
+    {
+      "source": "/zonas/lamatanza/",
+      "destination": "/zonas/cremacion-lamatanza/",
+      "permanent": true
+    },
+    {
+      "source": "/zonas/la-matanza/",
+      "destination": "/zonas/cremacion-lamatanza/",
+      "permanent": true
+    },
+    {
+      "source": "/cremacion-la-matanza.html",
+      "destination": "/zonas/cremacion-lamatanza/",
+      "permanent": true
     }
   ],
   "headers": [

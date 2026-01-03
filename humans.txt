@@ -3,23 +3,42 @@ Name: Despedida Simple
 Site: https://despedidasimple.com
 Twitter: @DespedidaSimple
 Location: Buenos Aires, Argentina
+Contact: +54 9 11 3313-1536
 
 /* SITE */
 Language: Spanish (Español)
 Charset: UTF-8
 DocType: HTML5
 Doctype: html lang="es"
+Last updated: 2026-01-03
+
+/* COVERAGE ZONES */
+Main: Buenos Aires y AMBA
+CABA: https://despedidasimple.com/zonas/cremacion-caba/
+La Matanza: https://despedidasimple.com/zonas/cremacion-lamatanza/
+Zona Sur: Avellaneda, Lanús, Quilmes, Lomas de Zamora
+Zona Oeste: La Matanza, Morón, Merlo, Moreno
+Zona Norte: San Isidro, Vicente López, Tigre
 
 /* STANDARDS */
-Standards: HTML5, CSS3
-Components: Tailwind CSS, Schema.org
-Analytics: Google Analytics
-Tracking: Google Tag Manager
+Standards: HTML5, CSS3, ES6+
+Components: Schema.org JSON-LD, Open Graph, Twitter Cards
+Analytics: Google Analytics 4, Google Tag Manager
+SEO: Core Web Vitals optimized, Mobile-first
 
 /* TOOLS */
-Built with: HTML5, CSS3, JavaScript
-Optimized with: SEO Best Practices 2025
-Hosting: Netlify
+Built with: HTML5, CSS3, Vanilla JavaScript
+Optimized with: SEO Best Practices 2026
+Hosting: Vercel
+Fonts: Playfair Display, Inter (Google Fonts)
+
+/* SCHEMA MARKUP */
+LocalBusiness: Cremación directa
+Service: Cremación sin velatorio
+FAQPage: Preguntas frecuentes por zona
+BreadcrumbList: Navegación estructurada
+GeoCoordinates: SEO local optimizado
 
 /* ACKNOWLEDGMENTS */
 Thanks to all our clients and families we serve
+More than 60 years of experience serving Buenos Aires

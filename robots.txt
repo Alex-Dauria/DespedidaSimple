@@ -1,21 +1,29 @@
 # robots.txt para Despedida Simple
 # Cremación directa en Buenos Aires y AMBA
 # Última actualización: 2026-01-03
+# Zonas: CABA, La Matanza, Zona Sur, Zona Norte, Zona Oeste
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /DATA-BUSQUEDAS/
+Disallow: /*.csv$
+Disallow: /*?*
 
 # Permitir recursos importantes para indexación
 Allow: /css/
 Allow: /js/
 Allow: /assets/
 Allow: /zonas/
+Allow: /zonas/cremacion-caba/
+Allow: /zonas/cremacion-lamatanza/
 
 # Sitemap principal
 Sitemap: https://despedidasimple.com/sitemap.xml
+
+# Crawl-delay sugerido (opcional)
+Crawl-delay: 1
 
 # Google - Máximo acceso
 User-agent: Googlebot
@@ -40,6 +48,41 @@ Allow: /
 User-agent: facebot
 Allow: /
 
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# WhatsApp (preview links)
+User-agent: WhatsApp
+Allow: /
+
+# Pinterest
+User-agent: Pinterestbot
+Allow: /
+
 # Internet Archive
 User-agent: ia_archiver
+Allow: /
+
+# Apple (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+
+# GPTBot (OpenAI) - Permitido para visibilidad en AI
+User-agent: GPTBot
+Allow: /
+
+# ClaudeBot (Anthropic) - Permitido para visibilidad en AI
+User-agent: ClaudeBot
+Allow: /
+
+# PerplexityBot - Permitido para búsquedas AI
+User-agent: PerplexityBot
 Allow: /
