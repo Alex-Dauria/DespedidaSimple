@@ -13,7 +13,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://despedidasimple.com/"/>
     <image:image>
       <image:loc>https://despedidasimple.com/og-image.jpg</image:loc>
-      <image:title>Cremación Directa Buenos Aires $570.000 - Despedida Simple</image:title>
+      <image:title>Cremación Directa en Buenos Aires - Despedida Simple</image:title>
       <image:caption>Servicio de cremación directa en Buenos Aires y AMBA. Retiro, trámites, cremación y entrega de cenizas a domicilio. Atención 24 horas. Sin costos ocultos.</image:caption>
       <image:geo_location>Buenos Aires, Argentina</image:geo_location>
     </image:image>
@@ -33,8 +33,8 @@
     <xhtml:link rel="alternate" hreflang="es-AR" href="https://despedidasimple.com/zonas/cremacion-caba/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://despedidasimple.com/zonas/cremacion-caba/"/>
     <image:image>
-      <image:loc>https://despedidasimple.com/og-image.jpg</image:loc>
-      <image:title>Cremación en Capital Federal CABA $570.000 - Despedida Simple</image:title>
+      <image:loc>https://despedidasimple.com/zonas/cremacion-caba/og-image.jpg</image:loc>
+      <image:title>Cremación Directa en Capital Federal - Despedida Simple</image:title>
       <image:caption>Servicio de cremación directa en Capital Federal. Retiro en todos los barrios: Palermo, Belgrano, Recoleta, Caballito. Hospitales: Italiano, Alemán, Británico, Fernández.</image:caption>
       <image:geo_location>Ciudad Autónoma de Buenos Aires, Argentina</image:geo_location>
     </image:image>
@@ -50,7 +50,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://despedidasimple.com/zonas/cremacion-lamatanza/"/>
     <image:image>
       <image:loc>https://despedidasimple.com/zonas/cremacion-lamatanza/og-image.jpg</image:loc>
-      <image:title>Cremación en La Matanza $570.000 - Despedida Simple</image:title>
+      <image:title>Cremación Directa en La Matanza - Despedida Simple</image:title>
       <image:caption>Servicio de cremación directa en La Matanza. Retiro en San Justo, Ramos Mejía, Isidro Casanova, González Catán, Rafael Castillo, Laferrere, Ciudad Evita. Hospitales: Paroissien, Simplemente Evita.</image:caption>
       <image:geo_location>La Matanza, Buenos Aires, Argentina</image:geo_location>
     </image:image>
