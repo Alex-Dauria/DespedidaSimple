@@ -30,6 +30,11 @@
   # Redirigir www a non-www
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  
+  # Redirect páginas antiguas a nueva estructura /zonas/
+  RewriteRule ^cremacion-caba\.html$ /zonas/cremacion-caba/ [R=301,L]
+  RewriteRule ^zonas/cremacion-caba\.html$ /zonas/cremacion-caba/ [R=301,L]
+  RewriteRule ^zonas/caba/?$ /zonas/cremacion-caba/ [R=301,L]
 </IfModule>
 
 # Prevenir listado de directorios

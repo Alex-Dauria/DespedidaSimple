@@ -77,9 +77,11 @@
   <link rel="canonical" href="https://despedidasimple.com/">
   
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,6 +90,80 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Estilos específicos index -->
+  <style>
+    /* Process section - reducir espacio inferior */
+    .section.process {
+      padding-bottom: 2rem !important;
+    }
+    
+    /* Services section - fondo de mármol */
+    .section.services {
+      background-image: url('assets/images/marmol.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    
+    .section.services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: 0;
+    }
+    
+    .section.services .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Hero title - una línea desktop, dos líneas mobile */
+    .hero__title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+      line-height: 1.2 !important;
+      white-space: nowrap;
+      text-align: center;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+    }
+    
+    /* Mobile: dos líneas, más arriba y subtitle más cerca */
+    @media (max-width: 768px) {
+      .hero__title {
+        font-size: clamp(2.4rem, 6.5vw, 3.4rem) !important;
+        white-space: normal;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0.75rem !important;
+      }
+      
+      .hero__title span {
+        display: block;
+      }
+      
+      .hero__content {
+        padding-top: 0.5rem !important;
+      }
+      
+      .hero__subtitle {
+        margin-bottom: 1.5rem !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero__title {
+        font-size: clamp(2.2rem, 6.7vw, 2.9rem) !important;
+      }
+    }
+  </style>
   
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -378,7 +454,7 @@
   <nav class="navbar">
     <div class="container navbar__inner">
       <a href="/" class="navbar__logo">
-        <img src="urna.png" alt="Despedida Simple - Cremación Directa Buenos Aires" class="navbar__logo-icon">
+        <img src="assets/images/urna.png" alt="Despedida Simple - Cremación Directa Buenos Aires" class="navbar__logo-icon">
         <div class="navbar__logo-text">
           <div class="navbar__logo-line1">Despedida</div>
           <div class="navbar__logo-line2">Simple</div>
@@ -406,12 +482,12 @@
     <div class="hero__content">
       
       <h1 class="hero__title reveal reveal-delay-1">
-        Despedida <span>Simple</span>
+        Cremación Directa <span>Buenos Aires</span>
       </h1>
       
       <p class="hero__subtitle reveal reveal-delay-2">
-        Cremación directa en Buenos Aires<br>
-        <span class="hero__subtitle-secondary hero__subtitle-desktop">Nos ocupamos de todo para que vos puedas despedirte en paz</span>
+        Servicio de cremación en AMBA<br>
+        <span class="hero__subtitle-secondary hero__subtitle-desktop">Retiro en todo Buenos Aires y Gran Buenos Aires</span>
       </p>
       
       <!-- Price Card -->
@@ -545,10 +621,10 @@
   <section class="section services" id="servicios">
     <div class="container">
       <div class="section__header">
-        <h2 class="reveal services-title-mobile">Todo incluido en el servicio</h2>
+        <h2 class="reveal services-title-mobile">Cuidamos cada detalle</h2>
         <p class="reveal reveal-delay-1">
-          <span class="services__text-line1">Un único precio transparente</span>
-          <span class="services__text-line2">sin sorpresas ni costos adicionales</span>
+          <span class="services__text-line1">Sabemos que es un momento difícil</span>
+          <span class="services__text-line2">por eso hacemos todo <strong>simple</strong> para vos</span>
         </p>
       </div>
     </div>
@@ -660,7 +736,7 @@
       <div class="testimonials__grid">
         <div class="testimonial-card reveal">
           <div class="testimonial-card__header">
-            <img src="Reseñas/AlanKlein.png" alt="Reseña de Alan Klein sobre cremación directa en Buenos Aires" class="testimonial-card__avatar">
+            <img src="assets/reviews/AlanKlein.png" alt="Reseña de Alan Klein sobre cremación directa en Buenos Aires" class="testimonial-card__avatar">
             <div class="testimonial-card__info">
               <span class="testimonial-card__name">Alan Klein</span>
               <div class="testimonial-card__stars">
@@ -677,7 +753,7 @@
         
         <div class="testimonial-card reveal reveal-delay-1">
           <div class="testimonial-card__header">
-            <img src="Reseñas/FernandaPajaro.png" alt="Reseña de Fernanda Pajaro sobre servicio de cremación" class="testimonial-card__avatar">
+            <img src="assets/reviews/FernandaPajaro.png" alt="Reseña de Fernanda Pajaro sobre servicio de cremación" class="testimonial-card__avatar">
             <div class="testimonial-card__info">
               <span class="testimonial-card__name">Fernanda Pajaro</span>
               <div class="testimonial-card__stars">
@@ -694,7 +770,7 @@
         
         <div class="testimonial-card reveal reveal-delay-2">
           <div class="testimonial-card__header">
-            <img src="Reseñas/MatiasQuintela.png" alt="Reseña de Matías Quintela sobre Despedida Simple" class="testimonial-card__avatar">
+            <img src="assets/reviews/MatiasQuintela.png" alt="Reseña de Matías Quintela sobre Despedida Simple" class="testimonial-card__avatar">
             <div class="testimonial-card__info">
               <span class="testimonial-card__name">Matías Quintela</span>
               <div class="testimonial-card__stars">
@@ -769,7 +845,7 @@
               </ul>
             </div>
             <div class="coverage__zone">
-              <h4>CABA</h4>
+              <h4><a href="/zonas/cremacion-caba/" class="coverage__zone-link">CABA</a></h4>
               <ul>
                 <li>Todos los barrios</li>
                 <li>Hospitales</li>

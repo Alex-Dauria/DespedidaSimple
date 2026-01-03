@@ -6,11 +6,13 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /DATA-BUSQUEDAS/
 
 # Permitir recursos importantes para indexación
 Allow: /css/
 Allow: /js/
-Allow: /Reseñas/
+Allow: /assets/
+Allow: /zonas/
 
 # Sitemap principal
 Sitemap: https://despedidasimple.com/sitemap.xml

@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Página principal - Máxima prioridad -->
+  <!-- Página principal - Buenos Aires y AMBA -->
   <url>
     <loc>https://despedidasimple.com/</loc>
     <lastmod>2026-01-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://despedidasimple.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://despedidasimple.com/"/>
     <image:image>
       <image:loc>https://despedidasimple.com/og-image.jpg</image:loc>
       <image:title>Cremación Directa Buenos Aires $570.000 - Despedida Simple</image:title>
       <image:caption>Servicio de cremación directa en Buenos Aires y AMBA. Retiro, trámites, cremación y entrega de cenizas a domicilio. Atención 24 horas. Sin costos ocultos.</image:caption>
+      <image:geo_location>Buenos Aires, Argentina</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://despedidasimple.com/urna.png</image:loc>
+      <image:loc>https://despedidasimple.com/assets/images/urna.png</image:loc>
       <image:title>Urna de madera incluida - Cremación Directa Buenos Aires</image:title>
       <image:caption>Urna estándar de madera incluida en el servicio de cremación directa</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Cremación en CABA / Capital Federal -->
+  <url>
+    <loc>https://despedidasimple.com/zonas/cremacion-caba/</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://despedidasimple.com/zonas/cremacion-caba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://despedidasimple.com/zonas/cremacion-caba/"/>
+    <image:image>
+      <image:loc>https://despedidasimple.com/og-image.jpg</image:loc>
+      <image:title>Cremación en Capital Federal CABA $570.000 - Despedida Simple</image:title>
+      <image:caption>Servicio de cremación directa en Capital Federal. Retiro en todos los barrios: Palermo, Belgrano, Recoleta, Caballito. Hospitales: Italiano, Alemán, Británico, Fernández.</image:caption>
+      <image:geo_location>Ciudad Autónoma de Buenos Aires, Argentina</image:geo_location>
     </image:image>
   </url>
 
